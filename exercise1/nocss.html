@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sean's Baking Site Reference Guide</title>
+</head>
+    <header>
+        <nav>
+            <div class="logo-area">
+                <h1>Sean's Baking Site Reference Guide</h1>
+                <p>Simple, delicious CSS and HTML tags.</p>
+            </div>
+            <ul>
+                <li><a href="nocss.html">NO CSS</a></li>
+                <li><a href="index.html">BONUS</a></li>
+            </ul>
+        </nav>
+    </header>
+<body>
+
+    <header>
+        <h1>Web Development Reference</h1>
+        <p>A full breakdown of every HTML tag and CSS property used in the Baking Recipes project.</p>
+    </header>
+
+    <hr>
+
+    <main>
+        <h2>Section 1: HTML Tag Examples</h2>
+
+        <h3>1. The Document Structure (html, head, title, link, body)</h3>
+        <p>These tags provide the essential "skeleton" of the website. The head section handles background information like the tab title and the link to your external CSS file, while the body section holds all the actual content that the user sees on the screen.</p>
+<pre> <code> 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Baking Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    </body>
+</html> 
+</code></pre> 
+
+
+        <h3>2. Layout Containers (header, nav, main, section, aside, div)</h3>
+        <p>Semantic containers are used to divide the page into logical regions. For example, the nav tag identifies your menu links, the section tag is perfect for grouping individual recipe cards, and the aside tag is used for secondary content like a video sidebar.</p>
+        <pre><code>
+<header>
+    <nav>Navigation</nav>
+</header>
+<main class="recipe-grid">
+    <section class="recipe-card">Recipe 1</section>
+    <aside class="sidebar">Video Links</aside>
+    <div>Generic grouping box</div>
+</main>
+        </code></pre>
+
+        <h3>3. Text & Lists (h1, h2, h3, p, ul, ol, li, hr)</h3>
+        <p>These tags organize your writing into a readable hierarchy. Headings (h1-h3) help the user navigate topics, paragraphs (p) handle the descriptions, and lists are essential for organizing ingredients with bullets (ul) or step-by-step instructions with numbers (ol).</p>
+        <pre><code>
+<h1>Classic Brownies</h1>
+<hr>
+<p>Easy to make chocolate brownies.</p>
+<h3>Ingredients</h3>
+<ul>
+    <li>Sugar</li>
+</ul>
+<h3>Method</h3>
+<ol>
+    <li>Melt butter.</li>
+</ol>
+        </code></pre>
+
+        <h3>4. Media & Links (a, iframe)</h3>
+        <p>The anchor tag (a) allows you to create hyperlinks to move between different pages of your site. The iframe tag is used specifically to embed external media, such as the MP4 videos used to demonstrate the baking process.</p>
+        <pre><code>
+<a href="index.html">Back to bonus</a>
+<iframe src="brownievid.mp4"></iframe>
+        </code></pre>
+
+        <h3>5. Formatting Code (pre, code)</h3>
+        <p>These tags are specifically designed to display technical information. The pre tag preserves the exact spacing and line breaks of your text, while the code tag applies a monospaced font to make the text look like it was written in a programming editor.</p>
+        <pre><code>
+<pre>
+    <code>This text is formatted like code!</code>
+</pre>
+        </code></pre>
+
+        <hr>
+
+        <h2>Section 2: CSS Property Examples</h2>
+
+        <h3>1. Layout (display: grid, grid-template-columns, gap)</h3>
+        <p>These properties are the foundation of a modern layout. They turn a container into a grid system, allowing you to define exactly how many columns you want (using fr units) and how much breathing room (gap) should exist between your cards.</p>
+        <pre><code>
+.recipe-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 0.8fr;
+    gap: 30px;
+}
+        </code></pre>
+
+        <h3>2. Positioning (position: sticky, z-index)</h3>
+        <p>These properties control how elements interact when the user scrolls. Sticky allows the header to remain visible at the top of the viewport, while z-index acts as a "layering" tool to ensure the header stays in front of the content sliding underneath it.</p>
+        <pre><code>
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+        </code></pre>
+
+        <h3>3. Visuals (background-image, border-radius, text-transform)</h3>
+        <p>These properties handle the aesthetic details of your site. They allow you to add decorative images to sections, round off the sharp corners of your recipe cards for a softer look, and automatically capitalize titles for a consistent design.</p>
+        <pre><code>
+.recipe-card {
+    background-image: url('cookies.jpg');
+    border-radius: 15px;
+}
+h2 {
+    text-transform: uppercase;
+}
+        </code></pre>
+
+        <h3>4. Sizing (box-sizing, margin, padding)</h3>
+        <p>Spacing properties are used to prevent content from looking cluttered. Margin creates space outside of elements, while padding creates space inside. Using border-box is a "best practice" that ensures your padding doesn't accidentally make your elements wider than your grid columns.</p>
+        <pre><code>
+* {
+    box-sizing: border-box;
+}
+section {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+        </code></pre>
+
+        <h3>5. Typography (font-family, text-shadow)</h3>
+        <p>Typography properties set the professional tone of the website. Font-family defines the typeface used for the text, and text-shadow is a creative way to add a "glow" or shadow behind headers to make them pop against busy background images.</p>
+        <pre><code>
+body {
+    font-family: Arial, sans-serif;
+}
+h1 {
+    text-shadow: 2px 2px 4px #000000;
+}
+        </code></pre>
+
+    </main>
+
+    <hr>
+    <footer>
+        <p>End of Reference Guide - Sean 2026</p>
+    </footer>
+
+</body>
+</html>
