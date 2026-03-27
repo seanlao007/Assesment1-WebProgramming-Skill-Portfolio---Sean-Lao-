@@ -35,7 +35,7 @@ function initGame() {
 
 function startNewRound() {
     correctColor = generateRandomColor();
-    colorToGuessEl.textContent = correctColor;
+    colorToGuessEl.textContent = correctColor.toUpperCase();
     generateColorOptions();
     messageEl.textContent = "Choose a color";
     messageEl.className = "";
@@ -47,7 +47,7 @@ function generateRandomColor() {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
-    return `RGB(${r}, ${g}, ${b})`;
+    return `rgb(${r}, ${g}, ${b})`;
 }
 /* This function generates a random color using the RGB format (Red, Green, Blue). 
    It picks a random number between 0 and 255 for each channel to create one of millions of possible colors. */
@@ -69,7 +69,8 @@ function generateColorOptions() {
         div.style.backgroundColor = color;
         
         div.onclick = function() {
-            if (color === correctColor) {
+            // We compare the style directly to the correctColor variable
+            if (div.style.backgroundColor === correctColor) {
                 score++;
                 scoreEl.textContent = score;
                 messageEl.textContent = "Correct!";
