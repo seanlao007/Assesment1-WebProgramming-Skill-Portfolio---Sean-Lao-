@@ -1,0 +1,90 @@
+/* Universal Reset */
+* {
+    box-sizing: border-box; /* Ensures borders don't increase the 200px width */
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Navigation Bar (Yale Blue Palette) */
+.nav-bar {
+    background-color: #1B4079;
+    padding: 15px 0;
+    margin-bottom: 50px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-bar a {
+    color: #CBDF90;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-bar a.active {
+    color: white;
+    border-bottom: 2px solid #CBDF90;
+}
+
+/* Box Layout */
+.box-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px; /* Increased gap to leave room for Box C's rings */
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.box-grid div {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+/* --- BOX STYLES --- */
+
+/* BOX A: Purple border with a blurry red shadow */
+#box-a {
+    border: 4px solid #8a2ae1;
+    box-shadow: 10px 10px 20px #ff2222;
+}
+
+/* BOX B: Green border with an INSET shadow */
+#box-b {
+    border: 4px solid #00ff01;
+    box-shadow: inset 15px 15px 25px black;
+}
+
+/* Red and Blue rings using pseudo-elements */
+#box-c {
+    border-radius: 16px; 
+    border: 4px solid #fe8c00; /* Orange border */
+    
+    /* Layered shadows: Blue, Red, then Green */
+    /* Logic: 0px blur makes them look like solid rings */
+    box-shadow: 
+        0px 0px 0px 6px #0000fe,  /* Blue */
+        0px 0px 0px 14px #fe0000, /* Red */
+        0px 0px 0px 20px #008001; /* Green */
+    
+    margin: 30px; /* Prevents the rings from overlapping neighbors */
+}
+
+/* BOX D: Simple firebrick red border with text shadow */
+#box-d {
+    border: 4px solid #b22222;
+    text-shadow: 4px 4px 1px black;
+}

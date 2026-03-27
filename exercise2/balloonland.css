@@ -1,0 +1,101 @@
+html {
+    scroll-behavior: smooth;
+    /* Makes scrolling between anchors smooth instead of instant jump */
+}
+
+body {
+    font-family: 'Trebuchet MS', sans-serif; /* Sets font for entire page */
+    margin: 0; /* Removes default browser margin */
+    line-height: 1.8; /* Makes text more readable */
+    background-color: #F9F7F2; /* Page background color */
+    color: #2D3436; /* Default text color */
+}
+
+/* ===== Navbar Styles ===== */
+.navbar {
+    background-color: #003B5C; /* Dark blue background */
+    padding: 20px 0;
+    text-align: center;
+    position: sticky; /* Sticks navbar at the top when scrolling */
+    top: 0;
+    z-index: 1000; /* Keeps it above other elements */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Adds subtle shadow */
+}
+
+.navbar a {
+    color: #E0F2F1; /* Light text for links */
+    text-decoration: none; /* Removes underline */
+    margin: 0 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Space between letters */
+}
+
+.navbar a:hover {
+    color: #FF8C42; /* Orange hover effect */
+}
+
+/* ===== Special Button Style in Navbar ===== */
+.btn-sticky {
+    background-color: #FF8C42; /* Orange button background */
+    padding: 10px 25px;
+    border-radius: 50px; /* Rounded pill shape */
+    color: white !important;
+    transition: 0.3s; /* Smooth hover effects */
+    border: 2px solid transparent;
+}
+
+.btn-sticky:hover {
+    background-color: transparent; /* Inverts button on hover */
+    border: 2px solid #FF8C42;
+    color: #FF8C42 !important;
+    transform: scale(1.1); /* Slightly enlarge button */
+}
+
+/* ===== Top Banner / Header ===== */
+.top-banner {
+    background: linear-gradient(to bottom, #003B5C, #005A8D); /* Gradient background */
+    color: white;
+    text-align: center;
+    padding: 100px 20px; /* Large padding for hero effect */
+}
+
+.top-banner h1 {
+    font-size: 3rem; /* Big heading */
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Subtle shadow for readability */
+}
+
+/* ===== Main Content Blocks ===== */
+.content-block {
+    max-width: 850px; /* Limit width for readability */
+    margin: 60px auto; /* Center block with top/bottom spacing */
+    padding: 40px;
+    background: white;
+    border-radius: 15px; /* Rounded corners */
+    border-bottom: 5px solid #FF8C42; /* Accent bottom border */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Subtle shadow */
+}
+
+/* Alternate color block style */
+.alt-color {
+    background-color: #E0F2F1;
+    border-bottom: 5px solid #003B5C;
+}
+
+/* Section headings */
+h2 {
+    color: #003B5C;
+    border-left: 5px solid #FF8C42; /* Decorative left border */
+    padding-left: 15px;
+}
+
+/* Reviews or quotes */
+.review-text {
+    font-size: 1.2rem;
+    font-style: italic; /* Italic for quotes/reviews */
+    color: #444;
+    background: #fdfdfd;
+    padding: 20px;
+    border-radius: 10px;
+}
