@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+/* The universal selector (*) resets the default browser margin and padding. 
+   Setting box-sizing to border-box ensures that padding doesn't increase the total width of your elements. */
+
+body {
+    background-image: url('RGBbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/* The body styles the main background and uses Flexbox to center the game container. 
+   Using 'min-height: 100vh' ensures the content stays perfectly centered even on large screens. */
+
+.container {
+    background-color: white;
+    width: 380px;
+    padding: 30px;
+    border-radius: 15px;
+    border: 3px solid #1e3a8a;
+    text-align: center;
+}
+/* This class styles the main game card where the game is played. 
+   The white background and dark blue border create a clean, modern interface for the player. */
+
+h1 {
+    color: #1e3a8a;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+/* The h1 styling sets the main title of the game. 
+   Using text-transform: uppercase gives it a professional, arcade-like feel. */
+
+#colorToGuess {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+/* This ID styles the box that displays the RGB code the player needs to find. 
+   The bold font and high-contrast colors make the code easy to read at a glance. */
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #1e3a8a;
+    font-weight: bold;
+}
+/* The game-info class uses Flexbox to push the score and lives to opposite sides of the container. 
+   This makes the game stats look organized and balanced above the color grid. */
+
+#lives span, #score span {
+    color: #3b82f6;
+}
+/* This targeting colors the actual numbers for lives and score differently from the text labels. 
+   Using a lighter blue makes the dynamic data stand out more to the user. */
+
+button {
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+/* General button styling for the game controls. 
+   It uses the same primary blue color to keep the branding consistent across the entire app. */
+
+button:hover {
+    background-color: #3b82f6;
+}

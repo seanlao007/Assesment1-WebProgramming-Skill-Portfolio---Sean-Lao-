@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+/* The universal selector (*) resets the default browser spacing. 
+   Setting margin and padding to 0 ensures the layout starts with a clean slate across all browsers. */
+
+body {
+    background-image: url('cityscapebg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/* The body styling handles the full-page background image and uses Flexbox. 
+   This perfectly centers the calculator card both horizontally and vertically on the screen. */
+
+.calculator-card {
+    background-color: white;
+    width: 350px;
+    padding: 30px;
+    border-radius: 15px;
+    border: 3px solid #1e3a8a; 
+    text-align: center;
+}
+/* This class styles the main container for the calculator. 
+   It sets a fixed width, rounded corners, and a dark blue border to make it look like a floating card. */
+
+h2 {
+    color: #1e3a8a; 
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/* The h2 styling makes the "Petrol Calculator" title stand out. 
+   It uses uppercase letters and extra spacing between characters for a modern, professional look. */
+
+.input-box {
+    margin-bottom: 15px;
+    text-align: left;
+}
+/* This block adds vertical spacing between the different input sections. 
+   Setting text-align to left ensures the labels stay aligned with the start of the input fields. */
+
+label {
+    display: block;
+    color: #1e3a8a; 
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+/* Labels are set to 'display: block' so they sit on their own line above the input fields. 
+   The bold weight and small font size make them clear and easy to read. */
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #d1edff; 
+    border-radius: 8px;
+    font-size: 16px;
+}
+/* These rules style the text boxes where users type. 
+   The 100% width ensures they fill the card, and the padding adds space for the text inside. */
+
+input:focus {
+    outline: none;
+    border-color: #3b82f6; 
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+}
+/* The :focus pseudo-class changes the border color when a user clicks into a text box. 
+   It adds a soft blue glow (box-shadow) to show which field is currently active. */
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #1e3a8a; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+/* This block styles the calculate button to look clickable and bold. 
+   The 'transition' property ensures that any color changes happen smoothly over 0.3 seconds. */
+
+button:hover {
+    background-color: #3b82f6; 
+}
+/* The :hover state lightens the blue color when the mouse is over the button. 
+   This provides visual feedback to the user that the button is ready to be clicked. */
+
+.result-box {
+    margin-top: 20px;
+    padding-top: 15px;
+}
+/* This adds spacing at the bottom of the card for the results area. 
+   It keeps the total cost separated from the inputs and button above it. */
+
+.result-box p {
+    color: #1e3a8a;
+    font-weight: bold;
+}
+/* These rules style the "Total Cost" text. 
+   Matching the color to the header keeps the overall design of the card consistent. */
+
+#total-text {
+    color: #10b981; 
+    font-size: 26px;
+    display: block;
+    margin-top: 5px;
+}
+/* This styles the final calculated number specifically. 
+   The bright green color and large font size make the final result the most obvious thing on the page. */
